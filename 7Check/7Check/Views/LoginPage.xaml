@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_7Check.Views.LoginPage"
+             
+             >
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.RowSpan="2" BackgroundColor="#B8C5D7" Opacity="0.3">
+                
+            </StackLayout>
+            <Frame Grid.Row="1" BackgroundColor="White" CornerRadius="20">
+                <StackLayout>
+                    <Label Text="7Mobile" TextColor="#5E40E3" FontSize="56" HorizontalTextAlignment="Center"/>
+                    <StackLayout >
+                        <Frame CornerRadius="15" Padding="4" BackgroundColor="#B8C5D7" Opacity="0.4" Margin="5,10,5,10">
+                            <Entry x:Name="Email" 
+                                   Keyboard="Email" 
+                                   Placeholder="Email"
+                                   Text="{Binding Email}" 
+                                   PlaceholderColor="Gray"
+                                   CursorPosition="10"
+                                   />
+                        </Frame>
+                    </StackLayout>
+                    <Frame CornerRadius="15" Padding="4" BackgroundColor="#B8C5D7" Opacity="0.4" Margin="5,10,5,10">
+                        <Entry x:Name="Password" IsPassword="True" Placeholder="Mot de passe" Opacity="0.8" PlaceholderColor="Gray" Text="{Binding Password}" />
+                    </Frame>
+                    <Button Text="Valider" FontSize="18"  TextColor="White" Command="{Binding SubmitCommand}" BackgroundColor="#5E40E3" Opacity="0.95" CornerRadius="30" Margin="10"  />
+                    
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

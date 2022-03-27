@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:_7Check.ViewModels" 
+             x:DataType="viewmodels:StartVehicleViewModel"
+             x:Class="_7Check.Views.StartVehiclePage">
+    <ContentPage.BindingContext>
+        <viewmodels:StartVehicleViewModel/>
+    </ContentPage.BindingContext>
+        <StackLayout>
+            <Label Text="Page des réservations du jour"
+                 />
+            <Label Text="{Binding Text}"/>
+
+
+
+
+            <ListView x:Name="listBookings" ItemsSource="{Binding ItemList}">
+                
+            </ListView>
+        <ListView  x:Name="ListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="ok"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+
+</ContentPage>
+            
